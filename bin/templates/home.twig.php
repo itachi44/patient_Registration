@@ -9,11 +9,19 @@
 {% endblock %}
 
 {% block body %}
+
 <p>Yoroshiku onegaishimaaas</p>
 
-{% for patient in patients %}
+{% for patient in data.patients %}
+    <span> id patient : {{ patient.id_patient }} </span>
+    <span> nom patient : {{ patient.nom_patient }} </span>
+    <span> prenom patient:  {{ patient.prenom_patient }} </span>
+    <span> age: {{ patient.age }}</span>
+    <span> sexe: {{ patient.sexe }}</span>
+    </br>
 
-    {{ patient.id_patient }}
+
+
 
 {% endfor %}
 
