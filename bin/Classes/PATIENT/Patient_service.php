@@ -43,11 +43,11 @@ public function findById(int $id){
     }
 
 
-public function add(string $nom, string $prenom, int $age, string $sexe){
+public function add(string $prenom, string $nom, int $age, string $sexe){
         try {
         $this->db->beginTransaction();
         $stmt = $this->db->prepare(PATIENT_ADD);
-        $stmt->execute([':prenom_patient' => $prenom,':nom_patient' =>$nom,':age' => $age,':sexe' =>$sexe]);
+        $stmt->execute([':prenom' => $prenom,':nom' =>$nom,':age' => $age,':sexe' =>$sexe]);
         $this->db->commit();
         return true;
         } catch(Exception $e) {
@@ -60,7 +60,7 @@ public function add(string $nom, string $prenom, int $age, string $sexe){
 public function update(int $id, string $nom, string $prenom, int $age, string $sexe ){
         try {
         $this->db->beginTransaction();
-        $stmt = $this->db->prepare(PATIENT_UPDATE); $stmt->execute([':id'=>$id,':prenom_patient' => $prenom,':nom_patient' =>
+        $stmt = $this->db->prepare(PATIENT_UPDATE); $stmt->execute([':id_patient'=>$id,':prenom_patient' => $prenom,':nom_patient' =>
         $nom,':age' => $age,':sexe' => $sexe]); 
         $this->db->commit();
         return true;

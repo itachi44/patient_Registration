@@ -1,3 +1,6 @@
+
+
+
 let myForm = document.getElementById("IdForm");
 let nom = document.getElementById("nom");
 let prenom = document.getElementById("prenom");
@@ -21,7 +24,6 @@ function verifPseudo(field) {
 }
 
 myForm.addEventListener("submit", (e) => {
-	e.preventDefault();
 	verifPseudo(nom);
 	verifPseudo(prenom);
 	verifPseudo(age);

@@ -33,52 +33,42 @@
             <div class="card card-4">
                 <div class="card-body">
                     <h1 class="title">Formulaire d'inscription</h1>
-                    <form method="POST" action="controller.php">
+                    <form id="IdForm" method="POST" action="controller.php">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Prénom</label>
-                                    <input class="input--style-4" type="text" name="first_name">
+                                    <input id="prenom" class="input--style-4" type="text" name="first_name">
                                 </div>
                             </div>
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Nom</label>
-                                    <input class="input--style-4" type="text" name="last_name">
+                                    <input id="nom" class="input--style-4" type="text" name="last_name">
                                 </div>
                             </div>
                         </div>
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
-                                    <label class="label">Age (en mois; -1 an)</label>
-                                    <div class="input-group-icon">
-                                        <input class="input--style-4" type="text" name="last_name">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="input-group">
                                     <label class="label">Age (en année)</label>
                                     <div class="input-group-icon">
-                                        <input class="input--style-4" type="text" name="last_name">
+                                        <input id="age" class="input--style-4" type="text" name="Age">
                                     </div>
                                 </div>
                             </div>
                         </div>
-        
-
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">
                                     <label class="label">Sexe</label>
                                     <div class="p-t-10">
                                         <label class="radio-container m-r-45">Masculin
-                                            <input type="radio" checked="checked" name="gender">
+                                            <input type="radio" checked="checked" value="m" name="sexe">
                                             <span class="checkmark"></span>
                                         </label>
                                         <label class="radio-container">Feminin
-                                            <input type="radio" name="gender">
+                                            <input type="radio" value="f" name="sexe">
                                             <span class="checkmark"></span>
                                         </label>
                                     </div>
@@ -86,7 +76,7 @@
                             </div>
                         </div>
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--green" type="submit">Submit</button>
+                            <button class="btn btn--radius-2 btn--green"  type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -95,6 +85,7 @@
     </div>
 
     <!-- Jquery JS-->
+    <script src="templates/form.js"></script>
     <script src="templates/vendor/jquery/jquery.min.js"></script>
     <!-- Vendor JS-->
     <script src="templates/vendor/select2/select2.min.js"></script>

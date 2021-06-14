@@ -11,7 +11,7 @@ define("PATIENT_FIND_ALL","SELECT * from ".PATIENT);
 
 define("PATIENT_FIND_BY_ID","SELECT * from ".PATIENT." WHERE id=:id");
 
-define("PATIENT_ADD","INSERT INTO ".PATIENT." (prenom_PATIENT, nom_PATIENT, age, sexe) VALUES(:prenom, :nom, :age, sexe)");
+define("PATIENT_ADD","INSERT INTO ".PATIENT." (prenom_patient, nom_patient, age, sexe) VALUES(:prenom, :nom, :age, :sexe)");
 
 define("PATIENT_UPDATE","UPDATE ".PATIENT." set prenom_patient=:prenom, nom_patient=:nom, age=:age, age=:age WHERE id_patient=:id"); 
 
