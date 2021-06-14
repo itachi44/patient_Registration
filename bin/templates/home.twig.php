@@ -27,6 +27,14 @@
 {% endblock %}
 
 {% block body %}
+<style>
+.valid{
+    background-color:green;
+}
+.invalid{
+    background-color:red;
+}
+</style>
 
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
         <div class="wrapper wrapper--w680">
@@ -76,7 +84,7 @@
                             </div>
                         </div>
                         <div class="p-t-15">
-                            <button class="btn btn--radius-2 btn--green"  type="submit">Submit</button>
+                            <button class="btn btn--radius-2 btn--green" id="submit"  type="submit">Submit</button>
                         </div>
                     </form>
                 </div>
