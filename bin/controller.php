@@ -8,12 +8,14 @@ $twig = new \Twig\Environment($loader, [
     'cache' =>false, // __DIR__ .'/cache', pour le moment (option dev)
 ]); 
 
-
+//récupérer les données 
+//vérifier
+//inserer dans la BD avec la méthode add
 
 
 //rendu du template
 
-echo $twig->render('/index.php', [ 
+echo $twig->render('', [ 
     'data' =>
     [
     
