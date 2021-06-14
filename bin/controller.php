@@ -11,13 +11,12 @@ $twig = new \Twig\Environment($loader, [
 
 
 
-
-
 //rendu du template
 
-echo $twig->render('', [ 
+echo $twig->render('/index.php', [ 
     'data' =>
     [
+    
 
     ],
  

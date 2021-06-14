@@ -2,6 +2,7 @@
 
 require 'vendor/autoload.php'; 
 require "Classes/PATIENT/Patient.php"; 
+require "Classes/PATIENT/Patient_service.php";
 
 $loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates'); 
 $twig = new \Twig\Environment($loader, [
@@ -10,32 +11,24 @@ $twig = new \Twig\Environment($loader, [
 
 
 
-$page="home"; //par defaut si pas de sessions ni de cookies
 //Modèle 
 
 
-//$serv1=new ProduitService();
-//$suggestions=$serv1->findSuggestions();
-//$tv=$serv1->find_TV_AUDIO();
-//$appMenag=$serv1->find_APPM();
-//$high_tech=$serv1->find_HIGHT();
-//$portables=$serv1->find_PORTABLE();
 
 
+//test requêtes
 
-session_start();
+$serv=new Patient_Service();
+$patients= $serv->findAll();
+
+
 
 //rendu du template
 
-echo $twig->render($page.'.twig.php', [ 
+echo $twig->render("home.twig.php", [ 
     'data' =>
     [
-        //'suggestions'=> $suggestions,
-        //'TV_AUDIO' => $tv,
-        //'appMenag' => $appMenag,
-        //'hightech' => $high_tech,
-        //'portables' => $portables,
-        //'session'=>$_SESSION,
+        "patients"=> $patients
 
     ],
  

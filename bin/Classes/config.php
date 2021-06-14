@@ -5,6 +5,7 @@ define("PASSWORD","root");
 define("BASE","BD");
 define("TABLE_PATIENT","PATIENT");
 define("SERVER","localhost:8889");
+define("DSN","mysql:dbname=".BASE.";host=".SERVER);
 
 define("PATIENT_FIND_ALL","SELECT * from ".PATIENT);
 

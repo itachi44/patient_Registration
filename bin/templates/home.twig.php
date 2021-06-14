@@ -11,6 +11,11 @@
 {% block body %}
 <p>Yoroshiku onegaishimaaas</p>
 
+{% for patient in patients %}
+
+    {{ patient.id_patient }}
+
+{% endfor %}
 
 {% endblock %}
 
