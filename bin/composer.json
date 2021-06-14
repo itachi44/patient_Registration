@@ -1,0 +1,6 @@
+{
+    "require": {
+        "twig/twig": "^1.42",
+        "twig/extensions": "^1.5"
+    }
+}
