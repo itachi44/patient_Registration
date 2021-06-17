@@ -11,7 +11,7 @@
 
 {% block header %}
 
-{% include "header.twig.php" %}
+{% include "header.php" %}
 {% endblock %}
 
 

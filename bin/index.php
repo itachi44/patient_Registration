@@ -16,19 +16,12 @@ $twig = new \Twig\Environment($loader, [
 
 
 
-//test requêtes
-
-$serv=new Patient_Service();
-$patients= $serv->findAll();
-
-
-
 //rendu du template
 
-echo $twig->render("home.twig.php", [ 
+echo $twig->render("signIn.php", [ 
     'data' =>
     [
-        "patients"=> $patients
+
 
     ],
  

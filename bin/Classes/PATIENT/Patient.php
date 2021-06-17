@@ -64,10 +64,10 @@ public function setId(string $value){
 
  public function hydrate(array $data) {
         foreach ($data as $key => $value) {
-        $method = 'set'.ucfirst(strtolower($key."")); 
-        if (method_exists($this, $method))
+        $method = 'set'.ucfirst(strtolower($key."")); //génération du mutateur
+        if (method_exists($this, $method)) // tester si le mutateur existe
         {
-             $this->$method($value); 
+             $this->$method($value); //executer la méthode sur l'objet courant
             }
         }
      }

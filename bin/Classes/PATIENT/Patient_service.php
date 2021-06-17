@@ -20,10 +20,10 @@ public function findAll(){
     $result=array();
     foreach ($query as $row){ 
         $patient= new Patient(); 
-        $patient->hydrate($row);
+        $patient->hydrate($row); //on récupère ligne par ligne et on les insère dans un array
          array_push($result, $row);
     }
-    return $result;
+    return $result; //on renvoie l'array
     }
 
 
