@@ -1,8 +1,6 @@
 <?php
 
-require_once ("../Classes/PATIENT/Patient.php"); 
 require_once ("../Classes/PATIENT/Patient_service.php");
-require_once ("../Classes/databaseManager.php");
 
 function getPatients()
   {

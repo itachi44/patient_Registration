@@ -23,13 +23,20 @@
 {% endblock %}
 
 {% block body %}
+{% if data.prenom and data.nom %}
+{{data.nom}} {{data.prenom}} <span>a bien été enregistré</span>
+
+{% endif %}
+
 <div style="background-image:url('templates/images/aida.png'); ">
+
+    
     <div class="page-wrapper bg-gra-02 p-t-130 p-b-100 font-poppins">
         <div class="wrapper wrapper--w680">
             <div class="card card-4">
                 <div class="card-body" style="box-shadow: 14px 10px 30px rgba(0, 0, 0, 0.41);">
                     <h1 class="title">Formulaire d'inscription</h1>
-                    <form method="POST" action="home.php">
+                    <form method="POST" action="">
                         <div class="row row-space">
                             <div class="col-2">
                                 <div class="input-group">

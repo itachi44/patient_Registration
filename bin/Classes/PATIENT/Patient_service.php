@@ -3,7 +3,9 @@
 declare(strict_types = 1); //types non modifiables
 
 require_once ("Patient.php"); 
-require_once ("../Classes/databaseManager.php");
+require_once ("Classes/databaseManager.php");
+//inclure require_once ("../Classes/databaseManager.php"); si on fait appel à l'api
+
 
 class Patient_Service { 
 protected $db;
