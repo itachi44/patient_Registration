@@ -3,8 +3,16 @@
 declare(strict_types = 1); //types non modifiables
 
 require_once ("Patient.php"); 
-require_once ("Classes/databaseManager.php");
-//inclure require_once ("../Classes/databaseManager.php"); si on fait appel à l'api
+
+$pattern = "#api/patients$#i";
+if (preg_match($pattern, $_SERVER['REQUEST_URI']))
+{
+    require_once ("../Classes/databaseManager.php"); 
+}
+else{
+    require_once ("Classes/databaseManager.php");
+
+}
 
 
 class Patient_Service { 

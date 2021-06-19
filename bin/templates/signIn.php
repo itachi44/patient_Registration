@@ -92,6 +92,14 @@
     <!-- JS-->
     <script src="templates/form.js"></script>
 
+<!--
+Aida donc pour tes callbacks 
+tu encapsules les boutons dans des balises form et tu laisses action vide (pour revenir sur la mm page)
+ensuite tu récupères la valeur que transmise par le bouton par exemple s'il s'agit d'une suppression:
+ -tu instancie un objet de la classe Service_Patient (ex: $myservice= new Service_Patient())
+ -ensuite tu fait appel à la méthode suppression ($myservice->delete($id)) en supposant aue tu avait fait transiter l'id par POST aussi
+ - la méthode delete te renvoie un boolean, tu peux l'afficher en debug pour voir l'état de ta requête
+-->
 
 
 <!-- end document-->
