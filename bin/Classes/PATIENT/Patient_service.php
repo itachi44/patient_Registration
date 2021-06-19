@@ -1,9 +1,9 @@
 <?php 
 
-declare(strict_types = 1); //non modifiables
+declare(strict_types = 1); //types non modifiables
 
-require_once ("Classes/PATIENT/Patient.php"); 
-require_once ("Classes/databaseManager.php");
+require_once ("Patient.php"); 
+require_once ("../Classes/databaseManager.php");
 
 class Patient_Service { 
 protected $db;
@@ -34,7 +34,7 @@ public function findById(int $id){
     $result = $stmt->fetch(PDO::FETCH_ASSOC);
     $patient= new Patient();
     $patient->hydrate($result);
-    return $patient;
+    return $result;
 
     } catch(Exception $e) {
     echo $e;

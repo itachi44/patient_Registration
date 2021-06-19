@@ -1,11 +1,11 @@
 <?php
-require_once ("Classes/config.php");
+require_once ("config.php");
 
 class MyDB {
 
 public static function getConnexion(){ 
 
-    try{
+try{
 $options=array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION);
 $connexion=new PDO(DSN,USER,PASSWORD,$options);
     return $connexion;

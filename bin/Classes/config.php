@@ -9,7 +9,7 @@ define("DSN","mysql:dbname=".BASE.";host=".SERVER);
 
 define("PATIENT_FIND_ALL","SELECT * from ".PATIENT);
 
-define("PATIENT_FIND_BY_ID","SELECT * from ".PATIENT." WHERE id=:id");
+define("PATIENT_FIND_BY_ID","SELECT * from ".PATIENT." WHERE id_patient=:id");
 
 define("PATIENT_ADD","INSERT INTO ".PATIENT." (prenom_patient, nom_patient, age, sexe) VALUES(:prenom, :nom, :age, :sexe)");
 
